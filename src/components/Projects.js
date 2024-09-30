@@ -24,30 +24,31 @@ export default function Projects() {
             {
                 image: websiteImg4,
                 description: 'Built a responsive weather app using React.js that fetches live weather data via an API. The app displays current weather, forecasts, and supports city-based search functionality.',
-                link: 'https://weather-app-livid-seven-27.vercel.app/',
+                link: 'https://vercel.com/relackiyas-projects/weather-app',
             },
         ],
     };
 
     return (
-        <section id='projects' className="py-20 px-5 bg-gradient-to-r from-purple-500 to-blue-600 text-white">
-            <div className="w-full flex flex-col px-10 py-5">
-                {/* Updated title without underline */}
-                <h1 className='text-4xl mb-5 w-[140px] font-bold'>Projects</h1>
-                <p>Here are some of the projects I've built using technologies like HTML, CSS, JavaScript, and React.js. Each project focuses on creating interactive and user-friendly web applications. Check them out.</p>
+        <section id='projects' className="py-20 px-5 bg-gradient-to-r from-purple-600 to-blue-700 text-white">
+            <div className="w-full flex flex-col px-10 py-5 bg-gray-900 rounded-lg shadow-lg">
+                <h1 className='text-4xl mb-5 font-bold'>Projects</h1>
+                <p className="text-lg mb-4">Explore my projects that demonstrate my skills in web development. Each project reflects my commitment to building responsive and interactive applications.</p>
+                <p className="text-sm italic">Click on the project titles to see them in action!</p>
             </div>
-            <div className="w-full flex flex-col md:flex-row px-10 gap-5">
+            <div className="w-full flex flex-col md:flex-row px-10 gap-5 mt-5">
                 {config.projects.map((project, index) => (
-                    <div key={index} className='relative rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl bg-gray-900'>
-                        {/* Reduced image size */}
-                        <img className='h-[140px] w-full object-cover transition-transform duration-300 transform hover:scale-110' src={project.image} alt={`Project ${index + 1}`} />
+                    <div key={index} className='relative rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl'>
+                        <img className='h-[160px] w-full object-cover transition-transform duration-300 transform hover:scale-110' src={project.image} alt={`Project ${index + 1}`} />
                         
-                        {/* Full description shown without hover */}
-                        <div className='bg-gray-800 p-5'>
-                            <p className='text-center text-lg font-semibold text-white'>{project.description}</p>
+                        <div className='absolute inset-0 bg-black opacity-0 hover:opacity-75 transition-opacity duration-300 flex items-center justify-center z-10'>
+                            <p className='text-center px-5 text-lg font-semibold text-white text-shadow'>{project.description}</p>
+                        </div>
+                        
+                        <div className='bg-gray-800 p-5 z-20 relative'>
                             <div className='flex justify-center mt-3'>
                                 <a 
-                                    className='btn bg-secondary text-white px-4 py-2 rounded transition-colors hover:bg-blue-700'
+                                    className='btn bg-secondary text-white px-4 py-2 rounded transition-colors hover:bg-white hover:text-secondary z-20'
                                     target='_blank' 
                                     rel="noopener noreferrer" 
                                     href={project.link}

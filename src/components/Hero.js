@@ -6,14 +6,14 @@ export default function Hero() {
         subtitle: 'I am a Full-Stack Developer specializing in React and Node.js',
         social: {
             Linkedin: 'https://www.linkedin.com/in/elackiya-rajamani-front-end-developer/',
-            facebook: 'https://www.facebook.com',  // Add your Facebook link
-            instagram: 'https://www.instagram.com', // Add your Instagram link
+            facebook: 'https://www.facebook.com',  
+            instagram: 'https://www.instagram.com', 
         }
     };
 
     return (
         <section className='flex flex-col md:flex-row items-center justify-center px-5 py-32 bg-gradient-to-b from-gray-900 to-gray-700'>
-            {/* Left Section with text */}
+          
             <div className='md:w-1/2 flex flex-col bg-gray-800 rounded-xl shadow-2xl p-10 space-y-5'>
                 <h1 className='text-white text-5xl font-extrabold leading-snug'>
                     Hello, I'm <span className='text-indigo-400'>Elackiya</span>

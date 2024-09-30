@@ -1,5 +1,6 @@
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { FaPaperPlane } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 
 export default function Contact() {
     const config = {
@@ -9,13 +10,12 @@ export default function Contact() {
 
     return (
         <section id="contact" className="relative flex flex-col bg-gradient-to-r from-violet-900 to-blue-800 px-5 py-32 text-white">
-            {/* Floating decorative icons */}
+            
             <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
                 <FaPaperPlane size={80} className="absolute text-blue-500 opacity-20 top-10 right-20 animate-bounce-slow" />
                 <FaPaperPlane size={60} className="absolute text-purple-500 opacity-20 bottom-32 left-10 animate-bounce-slower" />
             </div>
 
-            {/* Main content */}
             <div className="relative flex flex-col items-center z-10">
                 <h1 className="text-5xl mb-8 w-auto font-bold tracking-wide">Get In Touch</h1>
                 <p className="text-lg pb-8 text-center max-w-lg">
@@ -39,9 +39,36 @@ export default function Contact() {
                         </a>
                     </div>
                 </div>
+
+                {/* Social Media Icons */}
+                <div className="flex space-x-6 mt-10">
+                    <a 
+                        href="https://www.linkedin.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-secondary transition duration-300"
+                    >
+                        <FaLinkedin size={30} />
+                    </a>
+                    <a 
+                        href="https://github.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-secondary transition duration-300"
+                    >
+                        <FaGithub size={30} />
+                    </a>
+                    <a 
+                        href="https://twitter.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-secondary transition duration-300"
+                    >
+                        <FaTwitter size={30} />
+                    </a>
+                </div>
             </div>
 
-            {/* Decorative bottom stickers */}
             <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-r from-transparent to-purple-500 opacity-30"></div>
         </section>
     );

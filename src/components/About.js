@@ -1,4 +1,5 @@
-import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt, FaJsSquare, FaHtml5 } from 'react-icons/fa'; // Importing required icons
+import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt, FaJsSquare, FaHtml5 } from 'react-icons/fa'; 
+import { SiTailwindcss } from 'react-icons/si'; // Importing Tailwind CSS icon
 
 export default function About() {
     const config = {
@@ -7,12 +8,16 @@ export default function About() {
     };
 
     const skills = [
-        { icon: <FaReact size={30} className="text-blue-500" /> },
-        { icon: <FaNodeJs size={30} className="text-green-500" /> },
-        { icon: <FaDatabase size={30} className="text-green-600" /> },
-        { icon: <FaCss3Alt size={30} className="text-blue-600" /> },
-        { icon: <FaJsSquare size={30} className="text-yellow-500" /> },
-        { icon: <FaHtml5 size={30} className="text-red-500" /> }
+        { icon: <FaHtml5 size={30} className="text-red-500" />, name: 'HTML' },
+        { icon: <FaCss3Alt size={30} className="text-blue-600" />, name: 'CSS' },
+        { icon: <SiTailwindcss size={30} className="text-sky-400" />, name: 'Tailwind CSS' },
+        { icon: <FaJsSquare size={30} className="text-yellow-500" />, name: 'JavaScript' },
+      
+        { icon: <FaReact size={30} className="text-blue-500" />, name: 'React' },
+        { icon: <FaNodeJs size={30} className="text-green-500" />, name: 'Node.js' },
+        { icon: <FaDatabase size={30} className="text-green-600" />, name: 'MongoDB' }
+
+        // Added Tailwind CSS icon
     ];
 
     return (
@@ -24,8 +29,9 @@ export default function About() {
                     <p className='text-lg'>{config.description2}</p>
                     <div className='flex flex-wrap justify-center space-x-5 mt-8'>
                         {skills.map((skill, index) => (
-                            <div key={index} className='flex items-center justify-center w-[60px] h-[60px] bg-gray-700 rounded-full p-5 transition-transform transform hover:scale-110'>
+                            <div key={index} className='flex flex-col items-center justify-center w-[80px] h-[80px] bg-gray-700 rounded-full p-3 transition-transform transform hover:scale-110'>
                                 {skill.icon}
+                                <span className='text-white mt-1 text-sm'>{skill.name}</span>
                             </div>
                         ))}
                     </div>
